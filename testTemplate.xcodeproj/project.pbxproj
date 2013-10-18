@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EC5B27D1811B9AA00C32768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27C1811B9AA00C32768 /* Foundation.framework */; };
+		8EC5B27F1811B9AA00C32768 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27E1811B9AA00C32768 /* CoreGraphics.framework */; };
+		8EC5B2811811B9AA00C32768 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2801811B9AA00C32768 /* UIKit.framework */; };
+		8EC5B2871811B9AA00C32768 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B2851811B9AA00C32768 /* InfoPlist.strings */; };
+		8EC5B2891811B9AA00C32768 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2881811B9AA00C32768 /* main.m */; };
+		8EC5B28D1811B9AA00C32768 /* SQLIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B28C1811B9AA00C32768 /* SQLIAppDelegate.m */; };
+		8EC5B2901811B9AA00C32768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B28E1811B9AA00C32768 /* Main.storyboard */; };
+		8EC5B2931811B9AA00C32768 /* SQLIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2921811B9AA00C32768 /* SQLIViewController.m */; };
+		8EC5B2951811B9AA00C32768 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B2941811B9AA00C32768 /* Images.xcassets */; };
+		8EC5B29C1811B9AA00C32768 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B29B1811B9AA00C32768 /* XCTest.framework */; };
+		8EC5B29D1811B9AA00C32768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27C1811B9AA00C32768 /* Foundation.framework */; };
+		8EC5B29E1811B9AA00C32768 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2801811B9AA00C32768 /* UIKit.framework */; };
+		8EC5B2A61811B9AA00C32768 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B2A41811B9AA00C32768 /* InfoPlist.strings */; };
+		8EC5B2A81811B9AA00C32768 /* testTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2A71811B9AA00C32768 /* testTemplateTests.m */; };
+		8EC5B2B61811B9D100C32768 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B29B1811B9AA00C32768 /* XCTest.framework */; };
+		8EC5B2B71811B9D100C32768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27C1811B9AA00C32768 /* Foundation.framework */; };
+		8EC5B2B81811B9D100C32768 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2801811B9AA00C32768 /* UIKit.framework */; };
+		8EC5B2BE1811B9D100C32768 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B2BC1811B9D100C32768 /* InfoPlist.strings */; };
+		8EC5B2C01811B9D100C32768 /* testTemplateLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2BF1811B9D100C32768 /* testTemplateLogicTests.m */; };
+		8EC5B2C91811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */; };
+		8EC5B2CA1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */; };
+		8EC5B2CB1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */; };
+		8EC5B2D21811BE2400C32768 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D11811BE2400C32768 /* City.m */; };
+		8EC5B2D31811BE2400C32768 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D11811BE2400C32768 /* City.m */; };
+		8EC5B2D41811BE2400C32768 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D11811BE2400C32768 /* City.m */; };
+		8EC5B2D71811BE2400C32768 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D61811BE2400C32768 /* Forecast.m */; };
+		8EC5B2D81811BE2400C32768 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D61811BE2400C32768 /* Forecast.m */; };
+		8EC5B2D91811BE2400C32768 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D61811BE2400C32768 /* Forecast.m */; };
+		8EC5B2DC1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
+		8EC5B2DD1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
+		8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
+		8EC5B2E11811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */; };
+		8EC5B2E21811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */; };
+		8EC5B2E31811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */; };
+		8EC5B2E61811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */; };
+		8EC5B2E71811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */; };
+		8EC5B2E81811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */; };
+		8EC5B2EA1811BEB600C32768 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2E91811BEB600C32768 /* CoreData.framework */; };
+		8EC5B2EB1811BEBE00C32768 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2E91811BEB600C32768 /* CoreData.framework */; };
+		8EC5B2EC1811BEC600C32768 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2E91811BEB600C32768 /* CoreData.framework */; };
+		8EC5B3021811C10900C32768 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F01811C10900C32768 /* AFHTTPRequestOperation.m */; };
+		8EC5B3031811C10900C32768 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F01811C10900C32768 /* AFHTTPRequestOperation.m */; };
+		8EC5B3041811C10900C32768 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F01811C10900C32768 /* AFHTTPRequestOperation.m */; };
+		8EC5B3051811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F21811C10900C32768 /* AFHTTPRequestOperationManager.m */; };
+		8EC5B3061811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F21811C10900C32768 /* AFHTTPRequestOperationManager.m */; };
+		8EC5B3071811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F21811C10900C32768 /* AFHTTPRequestOperationManager.m */; };
+		8EC5B3081811C10900C32768 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F41811C10900C32768 /* AFHTTPSessionManager.m */; };
+		8EC5B3091811C10900C32768 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F41811C10900C32768 /* AFHTTPSessionManager.m */; };
+		8EC5B30A1811C10900C32768 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F41811C10900C32768 /* AFHTTPSessionManager.m */; };
+		8EC5B30B1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F71811C10900C32768 /* AFNetworkReachabilityManager.m */; };
+		8EC5B30C1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F71811C10900C32768 /* AFNetworkReachabilityManager.m */; };
+		8EC5B30D1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F71811C10900C32768 /* AFNetworkReachabilityManager.m */; };
+		8EC5B30E1811C10900C32768 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F91811C10900C32768 /* AFSecurityPolicy.m */; };
+		8EC5B30F1811C10900C32768 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F91811C10900C32768 /* AFSecurityPolicy.m */; };
+		8EC5B3101811C10900C32768 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2F91811C10900C32768 /* AFSecurityPolicy.m */; };
+		8EC5B3111811C10900C32768 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FB1811C10900C32768 /* AFURLConnectionOperation.m */; };
+		8EC5B3121811C10900C32768 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FB1811C10900C32768 /* AFURLConnectionOperation.m */; };
+		8EC5B3131811C10900C32768 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FB1811C10900C32768 /* AFURLConnectionOperation.m */; };
+		8EC5B3141811C10900C32768 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FD1811C10900C32768 /* AFURLRequestSerialization.m */; };
+		8EC5B3151811C10900C32768 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FD1811C10900C32768 /* AFURLRequestSerialization.m */; };
+		8EC5B3161811C10900C32768 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FD1811C10900C32768 /* AFURLRequestSerialization.m */; };
+		8EC5B3171811C10900C32768 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FF1811C10900C32768 /* AFURLResponseSerialization.m */; };
+		8EC5B3181811C10900C32768 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FF1811C10900C32768 /* AFURLResponseSerialization.m */; };
+		8EC5B3191811C10900C32768 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2FF1811C10900C32768 /* AFURLResponseSerialization.m */; };
+		8EC5B31A1811C10900C32768 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B3011811C10900C32768 /* AFURLSessionManager.m */; };
+		8EC5B31B1811C10900C32768 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B3011811C10900C32768 /* AFURLSessionManager.m */; };
+		8EC5B31C1811C10900C32768 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B3011811C10900C32768 /* AFURLSessionManager.m */; };
+		8EC5B3201811C18E00C32768 /* SQLIForecastService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B31F1811C18E00C32768 /* SQLIForecastService.m */; };
+		8EC5B3211811C18E00C32768 /* SQLIForecastService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B31F1811C18E00C32768 /* SQLIForecastService.m */; };
+		8EC5B3221811C18E00C32768 /* SQLIForecastService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B31F1811C18E00C32768 /* SQLIForecastService.m */; };
+		8EC5B3241811C3BA00C32768 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B3231811C3BA00C32768 /* libOCMock.a */; };
+		8EC5B3251811C3CC00C32768 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B3231811C3BA00C32768 /* libOCMock.a */; };
+		8EC5B3291811C64200C32768 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B3281811C64200C32768 /* city.json */; };
+		8EC5B32A1811C64200C32768 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B3281811C64200C32768 /* city.json */; };
+		8EC5B32B1811C64200C32768 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B3281811C64200C32768 /* city.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EC5B29F1811B9AA00C32768 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EC5B2711811B9AA00C32768 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EC5B2781811B9AA00C32768;
+			remoteInfo = testTemplate;
+		};
+		8EC5B2C21811B9D100C32768 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EC5B2711811B9AA00C32768 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EC5B2781811B9AA00C32768;
+			remoteInfo = testTemplate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8EC5B2791811B9AA00C32768 /* testTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC5B27C1811B9AA00C32768 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8EC5B27E1811B9AA00C32768 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8EC5B2801811B9AA00C32768 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8EC5B2841811B9AA00C32768 /* testTemplate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTemplate-Info.plist"; sourceTree = "<group>"; };
+		8EC5B2861811B9AA00C32768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8EC5B2881811B9AA00C32768 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EC5B28A1811B9AA00C32768 /* testTemplate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testTemplate-Prefix.pch"; sourceTree = "<group>"; };
+		8EC5B28B1811B9AA00C32768 /* SQLIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLIAppDelegate.h; sourceTree = "<group>"; };
+		8EC5B28C1811B9AA00C32768 /* SQLIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLIAppDelegate.m; sourceTree = "<group>"; };
+		8EC5B28F1811B9AA00C32768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EC5B2911811B9AA00C32768 /* SQLIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLIViewController.h; sourceTree = "<group>"; };
+		8EC5B2921811B9AA00C32768 /* SQLIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLIViewController.m; sourceTree = "<group>"; };
+		8EC5B2941811B9AA00C32768 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8EC5B29A1811B9AA00C32768 /* testTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC5B29B1811B9AA00C32768 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8EC5B2A31811B9AA00C32768 /* testTemplateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTemplateTests-Info.plist"; sourceTree = "<group>"; };
+		8EC5B2A51811B9AA00C32768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8EC5B2A71811B9AA00C32768 /* testTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTemplateTests.m; sourceTree = "<group>"; };
+		8EC5B2B51811B9D100C32768 /* testTemplateLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTemplateLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC5B2BB1811B9D100C32768 /* testTemplateLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTemplateLogicTests-Info.plist"; sourceTree = "<group>"; };
+		8EC5B2BD1811B9D100C32768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8EC5B2BF1811B9D100C32768 /* testTemplateLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTemplateLogicTests.m; sourceTree = "<group>"; };
+		8EC5B2C11811B9D100C32768 /* testTemplateLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testTemplateLogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		8EC5B2C81811B9EF00C32768 /* WeatherModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherModel.xcdatamodel; sourceTree = "<group>"; };
+		8EC5B2D01811BE2400C32768 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		8EC5B2D11811BE2400C32768 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		8EC5B2D51811BE2400C32768 /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
+		8EC5B2D61811BE2400C32768 /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
+		8EC5B2DA1811BE2400C32768 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		8EC5B2DB1811BE2400C32768 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		8EC5B2DF1811BE3D00C32768 /* SQLIDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLIDatabaseManager.h; sourceTree = "<group>"; };
+		8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLIDatabaseManager.m; sourceTree = "<group>"; };
+		8EC5B2E41811BE4900C32768 /* SQLIDatabaseAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLIDatabaseAccess.h; sourceTree = "<group>"; };
+		8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLIDatabaseAccess.m; sourceTree = "<group>"; };
+		8EC5B2E91811BEB600C32768 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8EC5B2EF1811C10900C32768 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8EC5B2F01811C10900C32768 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8EC5B2F11811C10900C32768 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		8EC5B2F21811C10900C32768 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		8EC5B2F31811C10900C32768 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		8EC5B2F41811C10900C32768 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		8EC5B2F51811C10900C32768 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		8EC5B2F61811C10900C32768 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		8EC5B2F71811C10900C32768 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		8EC5B2F81811C10900C32768 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		8EC5B2F91811C10900C32768 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		8EC5B2FA1811C10900C32768 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		8EC5B2FB1811C10900C32768 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		8EC5B2FC1811C10900C32768 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		8EC5B2FD1811C10900C32768 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		8EC5B2FE1811C10900C32768 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		8EC5B2FF1811C10900C32768 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		8EC5B3001811C10900C32768 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		8EC5B3011811C10900C32768 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		8EC5B31E1811C18E00C32768 /* SQLIForecastService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLIForecastService.h; sourceTree = "<group>"; };
+		8EC5B31F1811C18E00C32768 /* SQLIForecastService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLIForecastService.m; sourceTree = "<group>"; };
+		8EC5B3231811C3BA00C32768 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
+		8EC5B3281811C64200C32768 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EC5B2761811B9AA00C32768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B2EA1811BEB600C32768 /* CoreData.framework in Frameworks */,
+				8EC5B27F1811B9AA00C32768 /* CoreGraphics.framework in Frameworks */,
+				8EC5B2811811B9AA00C32768 /* UIKit.framework in Frameworks */,
+				8EC5B27D1811B9AA00C32768 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EC5B2971811B9AA00C32768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B3251811C3CC00C32768 /* libOCMock.a in Frameworks */,
+				8EC5B2EC1811BEC600C32768 /* CoreData.framework in Frameworks */,
+				8EC5B29C1811B9AA00C32768 /* XCTest.framework in Frameworks */,
+				8EC5B29E1811B9AA00C32768 /* UIKit.framework in Frameworks */,
+				8EC5B29D1811B9AA00C32768 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EC5B2B21811B9D100C32768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B3241811C3BA00C32768 /* libOCMock.a in Frameworks */,
+				8EC5B2EB1811BEBE00C32768 /* CoreData.framework in Frameworks */,
+				8EC5B2B61811B9D100C32768 /* XCTest.framework in Frameworks */,
+				8EC5B2B81811B9D100C32768 /* UIKit.framework in Frameworks */,
+				8EC5B2B71811B9D100C32768 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EC5B2701811B9AA00C32768 = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2ED1811C0E800C32768 /* ExternalFrameworks */,
+				8EC5B2821811B9AA00C32768 /* testTemplate */,
+				8EC5B2A11811B9AA00C32768 /* testTemplateTests */,
+				8EC5B2B91811B9D100C32768 /* testTemplateLogicTests */,
+				8EC5B27B1811B9AA00C32768 /* Frameworks */,
+				8EC5B27A1811B9AA00C32768 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EC5B27A1811B9AA00C32768 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2791811B9AA00C32768 /* testTemplate.app */,
+				8EC5B29A1811B9AA00C32768 /* testTemplateTests.xctest */,
+				8EC5B2B51811B9D100C32768 /* testTemplateLogicTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EC5B27B1811B9AA00C32768 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B3231811C3BA00C32768 /* libOCMock.a */,
+				8EC5B2E91811BEB600C32768 /* CoreData.framework */,
+				8EC5B27C1811B9AA00C32768 /* Foundation.framework */,
+				8EC5B27E1811B9AA00C32768 /* CoreGraphics.framework */,
+				8EC5B2801811B9AA00C32768 /* UIKit.framework */,
+				8EC5B29B1811B9AA00C32768 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EC5B2821811B9AA00C32768 /* testTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B31D1811C16300C32768 /* WebServices */,
+				8EC5B2CF1811BC5800C32768 /* Graphics */,
+				8EC5B2CE1811BC4700C32768 /* Class */,
+				8EC5B2CD1811BC3C00C32768 /* Model */,
+				8EC5B2941811B9AA00C32768 /* Images.xcassets */,
+				8EC5B2831811B9AA00C32768 /* Supporting Files */,
+			);
+			path = testTemplate;
+			sourceTree = "<group>";
+		};
+		8EC5B2831811B9AA00C32768 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B3261811C61C00C32768 /* BaseJson */,
+				8EC5B2841811B9AA00C32768 /* testTemplate-Info.plist */,
+				8EC5B2851811B9AA00C32768 /* InfoPlist.strings */,
+				8EC5B2881811B9AA00C32768 /* main.m */,
+				8EC5B28A1811B9AA00C32768 /* testTemplate-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EC5B2A11811B9AA00C32768 /* testTemplateTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2A71811B9AA00C32768 /* testTemplateTests.m */,
+				8EC5B2A21811B9AA00C32768 /* Supporting Files */,
+			);
+			path = testTemplateTests;
+			sourceTree = "<group>";
+		};
+		8EC5B2A21811B9AA00C32768 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2A31811B9AA00C32768 /* testTemplateTests-Info.plist */,
+				8EC5B2A41811B9AA00C32768 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EC5B2B91811B9D100C32768 /* testTemplateLogicTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2BF1811B9D100C32768 /* testTemplateLogicTests.m */,
+				8EC5B2BA1811B9D100C32768 /* Supporting Files */,
+			);
+			path = testTemplateLogicTests;
+			sourceTree = "<group>";
+		};
+		8EC5B2BA1811B9D100C32768 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2BB1811B9D100C32768 /* testTemplateLogicTests-Info.plist */,
+				8EC5B2BC1811B9D100C32768 /* InfoPlist.strings */,
+				8EC5B2C11811B9D100C32768 /* testTemplateLogicTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EC5B2CC1811BC3400C32768 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2DA1811BE2400C32768 /* Weather.h */,
+				8EC5B2DB1811BE2400C32768 /* Weather.m */,
+				8EC5B2D51811BE2400C32768 /* Forecast.h */,
+				8EC5B2D61811BE2400C32768 /* Forecast.m */,
+				8EC5B2D01811BE2400C32768 /* City.h */,
+				8EC5B2D11811BE2400C32768 /* City.m */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		8EC5B2CD1811BC3C00C32768 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */,
+				8EC5B2CC1811BC3400C32768 /* ManagedObjects */,
+				8EC5B2DF1811BE3D00C32768 /* SQLIDatabaseManager.h */,
+				8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */,
+				8EC5B2E41811BE4900C32768 /* SQLIDatabaseAccess.h */,
+				8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8EC5B2CE1811BC4700C32768 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2911811B9AA00C32768 /* SQLIViewController.h */,
+				8EC5B2921811B9AA00C32768 /* SQLIViewController.m */,
+				8EC5B28B1811B9AA00C32768 /* SQLIAppDelegate.h */,
+				8EC5B28C1811B9AA00C32768 /* SQLIAppDelegate.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		8EC5B2CF1811BC5800C32768 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B28E1811B9AA00C32768 /* Main.storyboard */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		8EC5B2ED1811C0E800C32768 /* ExternalFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2EE1811C0F100C32768 /* AFNetworking */,
+			);
+			name = ExternalFrameworks;
+			sourceTree = "<group>";
+		};
+		8EC5B2EE1811C0F100C32768 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B2EF1811C10900C32768 /* AFHTTPRequestOperation.h */,
+				8EC5B2F01811C10900C32768 /* AFHTTPRequestOperation.m */,
+				8EC5B2F11811C10900C32768 /* AFHTTPRequestOperationManager.h */,
+				8EC5B2F21811C10900C32768 /* AFHTTPRequestOperationManager.m */,
+				8EC5B2F31811C10900C32768 /* AFHTTPSessionManager.h */,
+				8EC5B2F41811C10900C32768 /* AFHTTPSessionManager.m */,
+				8EC5B2F51811C10900C32768 /* AFNetworking.h */,
+				8EC5B2F61811C10900C32768 /* AFNetworkReachabilityManager.h */,
+				8EC5B2F71811C10900C32768 /* AFNetworkReachabilityManager.m */,
+				8EC5B2F81811C10900C32768 /* AFSecurityPolicy.h */,
+				8EC5B2F91811C10900C32768 /* AFSecurityPolicy.m */,
+				8EC5B2FA1811C10900C32768 /* AFURLConnectionOperation.h */,
+				8EC5B2FB1811C10900C32768 /* AFURLConnectionOperation.m */,
+				8EC5B2FC1811C10900C32768 /* AFURLRequestSerialization.h */,
+				8EC5B2FD1811C10900C32768 /* AFURLRequestSerialization.m */,
+				8EC5B2FE1811C10900C32768 /* AFURLResponseSerialization.h */,
+				8EC5B2FF1811C10900C32768 /* AFURLResponseSerialization.m */,
+				8EC5B3001811C10900C32768 /* AFURLSessionManager.h */,
+				8EC5B3011811C10900C32768 /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		8EC5B31D1811C16300C32768 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B31E1811C18E00C32768 /* SQLIForecastService.h */,
+				8EC5B31F1811C18E00C32768 /* SQLIForecastService.m */,
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
+		8EC5B3261811C61C00C32768 /* BaseJson */ = {
+			isa = PBXGroup;
+			children = (
+				8EC5B3281811C64200C32768 /* city.json */,
+			);
+			name = BaseJson;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EC5B2781811B9AA00C32768 /* testTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EC5B2AB1811B9AA00C32768 /* Build configuration list for PBXNativeTarget "testTemplate" */;
+			buildPhases = (
+				8EC5B2751811B9AA00C32768 /* Sources */,
+				8EC5B2761811B9AA00C32768 /* Frameworks */,
+				8EC5B2771811B9AA00C32768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testTemplate;
+			productName = testTemplate;
+			productReference = 8EC5B2791811B9AA00C32768 /* testTemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EC5B2991811B9AA00C32768 /* testTemplateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EC5B2AE1811B9AA00C32768 /* Build configuration list for PBXNativeTarget "testTemplateTests" */;
+			buildPhases = (
+				8EC5B2961811B9AA00C32768 /* Sources */,
+				8EC5B2971811B9AA00C32768 /* Frameworks */,
+				8EC5B2981811B9AA00C32768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EC5B2A01811B9AA00C32768 /* PBXTargetDependency */,
+			);
+			name = testTemplateTests;
+			productName = testTemplateTests;
+			productReference = 8EC5B29A1811B9AA00C32768 /* testTemplateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EC5B2B41811B9D100C32768 /* testTemplateLogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EC5B2C41811B9D100C32768 /* Build configuration list for PBXNativeTarget "testTemplateLogicTests" */;
+			buildPhases = (
+				8EC5B2B11811B9D100C32768 /* Sources */,
+				8EC5B2B21811B9D100C32768 /* Frameworks */,
+				8EC5B2B31811B9D100C32768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EC5B2C31811B9D100C32768 /* PBXTargetDependency */,
+			);
+			name = testTemplateLogicTests;
+			productName = testTemplateLogicTests;
+			productReference = 8EC5B2B51811B9D100C32768 /* testTemplateLogicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EC5B2711811B9AA00C32768 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SQLI;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = sqli;
+				TargetAttributes = {
+					8EC5B2991811B9AA00C32768 = {
+						TestTargetID = 8EC5B2781811B9AA00C32768;
+					};
+					8EC5B2B41811B9D100C32768 = {
+						TestTargetID = 8EC5B2781811B9AA00C32768;
+					};
+				};
+			};
+			buildConfigurationList = 8EC5B2741811B9AA00C32768 /* Build configuration list for PBXProject "testTemplate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EC5B2701811B9AA00C32768;
+			productRefGroup = 8EC5B27A1811B9AA00C32768 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EC5B2781811B9AA00C32768 /* testTemplate */,
+				8EC5B2991811B9AA00C32768 /* testTemplateTests */,
+				8EC5B2B41811B9D100C32768 /* testTemplateLogicTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EC5B2771811B9AA00C32768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B2951811B9AA00C32768 /* Images.xcassets in Resources */,
+				8EC5B2871811B9AA00C32768 /* InfoPlist.strings in Resources */,
+				8EC5B3291811C64200C32768 /* city.json in Resources */,
+				8EC5B2901811B9AA00C32768 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EC5B2981811B9AA00C32768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B32A1811C64200C32768 /* city.json in Resources */,
+				8EC5B2A61811B9AA00C32768 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EC5B2B31811B9D100C32768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B32B1811C64200C32768 /* city.json in Resources */,
+				8EC5B2BE1811B9D100C32768 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EC5B2751811B9AA00C32768 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B30E1811C10900C32768 /* AFSecurityPolicy.m in Sources */,
+				8EC5B2E61811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
+				8EC5B30B1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
+				8EC5B2D71811BE2400C32768 /* Forecast.m in Sources */,
+				8EC5B3111811C10900C32768 /* AFURLConnectionOperation.m in Sources */,
+				8EC5B3021811C10900C32768 /* AFHTTPRequestOperation.m in Sources */,
+				8EC5B3081811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
+				8EC5B3141811C10900C32768 /* AFURLRequestSerialization.m in Sources */,
+				8EC5B2E11811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */,
+				8EC5B3201811C18E00C32768 /* SQLIForecastService.m in Sources */,
+				8EC5B31A1811C10900C32768 /* AFURLSessionManager.m in Sources */,
+				8EC5B2D21811BE2400C32768 /* City.m in Sources */,
+				8EC5B3051811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
+				8EC5B2DC1811BE2400C32768 /* Weather.m in Sources */,
+				8EC5B3171811C10900C32768 /* AFURLResponseSerialization.m in Sources */,
+				8EC5B2891811B9AA00C32768 /* main.m in Sources */,
+				8EC5B28D1811B9AA00C32768 /* SQLIAppDelegate.m in Sources */,
+				8EC5B2C91811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */,
+				8EC5B2931811B9AA00C32768 /* SQLIViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EC5B2961811B9AA00C32768 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B3121811C10900C32768 /* AFURLConnectionOperation.m in Sources */,
+				8EC5B2D81811BE2400C32768 /* Forecast.m in Sources */,
+				8EC5B3211811C18E00C32768 /* SQLIForecastService.m in Sources */,
+				8EC5B2CA1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */,
+				8EC5B2E71811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
+				8EC5B3181811C10900C32768 /* AFURLResponseSerialization.m in Sources */,
+				8EC5B2A81811B9AA00C32768 /* testTemplateTests.m in Sources */,
+				8EC5B3151811C10900C32768 /* AFURLRequestSerialization.m in Sources */,
+				8EC5B30F1811C10900C32768 /* AFSecurityPolicy.m in Sources */,
+				8EC5B3031811C10900C32768 /* AFHTTPRequestOperation.m in Sources */,
+				8EC5B31B1811C10900C32768 /* AFURLSessionManager.m in Sources */,
+				8EC5B2E21811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */,
+				8EC5B2D31811BE2400C32768 /* City.m in Sources */,
+				8EC5B3091811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
+				8EC5B2DD1811BE2400C32768 /* Weather.m in Sources */,
+				8EC5B30C1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
+				8EC5B3061811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EC5B2B11811B9D100C32768 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC5B3131811C10900C32768 /* AFURLConnectionOperation.m in Sources */,
+				8EC5B2D91811BE2400C32768 /* Forecast.m in Sources */,
+				8EC5B3221811C18E00C32768 /* SQLIForecastService.m in Sources */,
+				8EC5B2CB1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */,
+				8EC5B2E81811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
+				8EC5B3191811C10900C32768 /* AFURLResponseSerialization.m in Sources */,
+				8EC5B2C01811B9D100C32768 /* testTemplateLogicTests.m in Sources */,
+				8EC5B3161811C10900C32768 /* AFURLRequestSerialization.m in Sources */,
+				8EC5B3101811C10900C32768 /* AFSecurityPolicy.m in Sources */,
+				8EC5B3041811C10900C32768 /* AFHTTPRequestOperation.m in Sources */,
+				8EC5B31C1811C10900C32768 /* AFURLSessionManager.m in Sources */,
+				8EC5B2E31811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */,
+				8EC5B2D41811BE2400C32768 /* City.m in Sources */,
+				8EC5B30A1811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
+				8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */,
+				8EC5B30D1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
+				8EC5B3071811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EC5B2A01811B9AA00C32768 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EC5B2781811B9AA00C32768 /* testTemplate */;
+			targetProxy = 8EC5B29F1811B9AA00C32768 /* PBXContainerItemProxy */;
+		};
+		8EC5B2C31811B9D100C32768 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EC5B2781811B9AA00C32768 /* testTemplate */;
+			targetProxy = 8EC5B2C21811B9D100C32768 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8EC5B2851811B9AA00C32768 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC5B2861811B9AA00C32768 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8EC5B28E1811B9AA00C32768 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC5B28F1811B9AA00C32768 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EC5B2A41811B9AA00C32768 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC5B2A51811B9AA00C32768 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8EC5B2BC1811B9D100C32768 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EC5B2BD1811B9D100C32768 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EC5B2A91811B9AA00C32768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		8EC5B2AA1811B9AA00C32768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EC5B2AC1811B9AA00C32768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testTemplate/testTemplate-Prefix.pch";
+				INFOPLIST_FILE = "testTemplate/testTemplate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8EC5B2AD1811B9AA00C32768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testTemplate/testTemplate-Prefix.pch";
+				INFOPLIST_FILE = "testTemplate/testTemplate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8EC5B2AF1811B9AA00C32768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testTemplate.app/testTemplate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testTemplate/testTemplate-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
+				INFOPLIST_FILE = "testTemplateTests/testTemplateTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cdebortoli/Documents/code/SQLI/testTemplate/usr/lib,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8EC5B2B01811B9AA00C32768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testTemplate.app/testTemplate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testTemplate/testTemplate-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
+				INFOPLIST_FILE = "testTemplateTests/testTemplateTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cdebortoli/Documents/code/SQLI/testTemplate/usr/lib,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		8EC5B2C51811B9D100C32768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testTemplate.app/testTemplate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testTemplateLogicTests/testTemplateLogicTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
+				INFOPLIST_FILE = "testTemplateLogicTests/testTemplateLogicTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cdebortoli/Documents/code/SQLI/testTemplate/usr/lib,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8EC5B2C61811B9D100C32768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testTemplate.app/testTemplate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testTemplateLogicTests/testTemplateLogicTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
+				INFOPLIST_FILE = "testTemplateLogicTests/testTemplateLogicTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cdebortoli/Documents/code/SQLI/testTemplate/usr/lib,
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EC5B2741811B9AA00C32768 /* Build configuration list for PBXProject "testTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC5B2A91811B9AA00C32768 /* Debug */,
+				8EC5B2AA1811B9AA00C32768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EC5B2AB1811B9AA00C32768 /* Build configuration list for PBXNativeTarget "testTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC5B2AC1811B9AA00C32768 /* Debug */,
+				8EC5B2AD1811B9AA00C32768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8EC5B2AE1811B9AA00C32768 /* Build configuration list for PBXNativeTarget "testTemplateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC5B2AF1811B9AA00C32768 /* Debug */,
+				8EC5B2B01811B9AA00C32768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8EC5B2C41811B9D100C32768 /* Build configuration list for PBXNativeTarget "testTemplateLogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC5B2C51811B9D100C32768 /* Debug */,
+				8EC5B2C61811B9D100C32768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8EC5B2C81811B9EF00C32768 /* WeatherModel.xcdatamodel */,
+			);
+			currentVersion = 8EC5B2C81811B9EF00C32768 /* WeatherModel.xcdatamodel */;
+			path = WeatherModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8EC5B2711811B9AA00C32768 /* Project object */;
+}
