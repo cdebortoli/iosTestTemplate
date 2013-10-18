@@ -25,7 +25,6 @@
 		8EC5B2B71811B9D100C32768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27C1811B9AA00C32768 /* Foundation.framework */; };
 		8EC5B2B81811B9D100C32768 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2801811B9AA00C32768 /* UIKit.framework */; };
 		8EC5B2BE1811B9D100C32768 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B2BC1811B9D100C32768 /* InfoPlist.strings */; };
-		8EC5B2C01811B9D100C32768 /* testTemplateLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2BF1811B9D100C32768 /* testTemplateLogicTests.m */; };
 		8EC5B2C91811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */; };
 		8EC5B2CA1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */; };
 		8EC5B2CB1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2C71811B9EF00C32768 /* WeatherModel.xcdatamodeld */; };
@@ -40,7 +39,6 @@
 		8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
 		8EC5B2E11811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */; };
 		8EC5B2E21811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */; };
-		8EC5B2E31811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E01811BE3D00C32768 /* SQLIDatabaseManager.m */; };
 		8EC5B2E61811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */; };
 		8EC5B2E71811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */; };
 		8EC5B2E81811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2E51811BE4900C32768 /* SQLIDatabaseAccess.m */; };
@@ -82,6 +80,7 @@
 		8EC5B3291811C64200C32768 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B3281811C64200C32768 /* city.json */; };
 		8EC5B32A1811C64200C32768 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B3281811C64200C32768 /* city.json */; };
 		8EC5B32B1811C64200C32768 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EC5B3281811C64200C32768 /* city.json */; };
+		8EC5B32F1811CF0800C32768 /* SQLIDatabaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B32E1811CF0800C32768 /* SQLIDatabaseTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +123,6 @@
 		8EC5B2B51811B9D100C32768 /* testTemplateLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTemplateLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC5B2BB1811B9D100C32768 /* testTemplateLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTemplateLogicTests-Info.plist"; sourceTree = "<group>"; };
 		8EC5B2BD1811B9D100C32768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8EC5B2BF1811B9D100C32768 /* testTemplateLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTemplateLogicTests.m; sourceTree = "<group>"; };
 		8EC5B2C11811B9D100C32768 /* testTemplateLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testTemplateLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		8EC5B2C81811B9EF00C32768 /* WeatherModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherModel.xcdatamodel; sourceTree = "<group>"; };
 		8EC5B2D01811BE2400C32768 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
@@ -161,6 +159,7 @@
 		8EC5B31F1811C18E00C32768 /* SQLIForecastService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLIForecastService.m; sourceTree = "<group>"; };
 		8EC5B3231811C3BA00C32768 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
 		8EC5B3281811C64200C32768 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		8EC5B32E1811CF0800C32768 /* SQLIDatabaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLIDatabaseTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,8 +282,8 @@
 		8EC5B2B91811B9D100C32768 /* testTemplateLogicTests */ = {
 			isa = PBXGroup;
 			children = (
-				8EC5B2BF1811B9D100C32768 /* testTemplateLogicTests.m */,
 				8EC5B2BA1811B9D100C32768 /* Supporting Files */,
+				8EC5B32E1811CF0800C32768 /* SQLIDatabaseTest.m */,
 			);
 			path = testTemplateLogicTests;
 			sourceTree = "<group>";
@@ -582,12 +581,11 @@
 				8EC5B2CB1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */,
 				8EC5B2E81811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
 				8EC5B3191811C10900C32768 /* AFURLResponseSerialization.m in Sources */,
-				8EC5B2C01811B9D100C32768 /* testTemplateLogicTests.m in Sources */,
 				8EC5B3161811C10900C32768 /* AFURLRequestSerialization.m in Sources */,
 				8EC5B3101811C10900C32768 /* AFSecurityPolicy.m in Sources */,
 				8EC5B3041811C10900C32768 /* AFHTTPRequestOperation.m in Sources */,
 				8EC5B31C1811C10900C32768 /* AFURLSessionManager.m in Sources */,
-				8EC5B2E31811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */,
+				8EC5B32F1811CF0800C32768 /* SQLIDatabaseTest.m in Sources */,
 				8EC5B2D41811BE2400C32768 /* City.m in Sources */,
 				8EC5B30A1811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
 				8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */,

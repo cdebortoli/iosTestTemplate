@@ -29,6 +29,10 @@
  */
 +(SQLIDatabaseAccess *)sharedInstance;
 
+/*!
+ @abstract Generate the base data of cities
+ */
+- (void)generateBaseCities;
 
 #pragma mark - Save and rollback
 
@@ -41,6 +45,11 @@
  @abstract Cancels modifications applied to the Managed Object Context
  */
 - (void)rollback;
+
+/*!
+ @abstract Return the list of cities
+ */
+- (NSArray *)getCities;
 
 
 @end
