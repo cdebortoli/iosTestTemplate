@@ -7,7 +7,9 @@
 //
 
 #import "SQLIAppDelegate.h"
-//#import "SQLIDatabaseAccess.h"
+//TEMP
+#import "SQLIForecastService.h"
+//TEMP
 
 // 1 : JSON Data de base a importer dans la bdd dans l'init du DBManager
 // 2 : WebService creation and ocmock of it (préparer un mock)
@@ -20,7 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    [SQLIDatabaseAccess sharedInstance];
+    
+    // TEMP
+    [[SQLIForecastService sharedInstance] testGetForecastForCity];
+    //TEMP
+    
     return YES;
 }
 							

@@ -7,7 +7,9 @@
 //
 
 #import "SQLIForecastService.h"
-
+#import "AFNetworking.h"
+#import "City.h"
+#import "SQLIDatabaseAccess.h"
 
 @implementation SQLIForecastService
 
@@ -34,7 +36,24 @@
 
 -(void)getForecastForCity:(City *)city
 {
-    
+    NSString *getUrlStr = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?id=%@&mode=json&units=metric&cnt=7",city.primaryKey];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:getUrlStr parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        NSLog(@"JSON: %@", responseObject);
+    }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
+
+- (void)testGetForecastForCity
+{
+    
+    NSArray *cities = [[SQLIDatabaseAccess sharedInstance]getCities];
+    [self getForecastForCity:[cities objectAtIndex:0]];
+}
 @end
