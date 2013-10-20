@@ -12,7 +12,7 @@
 //TEMP
 
 // 1 : JSON Data de base a importer dans la bdd dans l'init du DBManager : DONE
-// 2 : WebService creation and ocmock of it (préparer un mock) : WS ok, ocmock todo
+// 2 : WebService creation and ocmock of it (préparer un mock) : WS ok, ocmock ok
 // 3 : Collection view + selection de city. Automation sur le click d'un forecast (popup)
 // 4 : Average temperature of the week. Unit test first
 // 5 : jenkins

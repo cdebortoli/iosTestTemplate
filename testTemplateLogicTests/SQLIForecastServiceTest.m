@@ -88,8 +88,7 @@
     NSString *semaphoreKey = @"forecastLoaded";
     
     // Start the method
-    NSString *getUrlStr = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?id=%@&mode=json&units=metric&cnt=7",currentCity.primaryKey];
-    [mockClient GET:getUrlStr parameters:nil
+    [mockClient GET:@"http://mockUrl" parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          for (NSDictionary *forecastDict in ((NSArray *) [responseObject objectForKey:JSON_KEY_FORECAST]))
