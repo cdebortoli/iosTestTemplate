@@ -38,6 +38,9 @@ static SQLIDatabaseAccess __strong *sharedInstance = nil;
     return self;
 }
 
+
+#pragma mark - Methods
+
 - (void)generateBaseCities
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -61,6 +64,41 @@ static SQLIDatabaseAccess __strong *sharedInstance = nil;
             [self.dbManager saveContext:saveError];
             
         }
+    }
+}
+
+- (void)deleteBaseCities
+{
+    for (City *city in [self getCities])
+    {
+        [self.dbManager.managedObjectContext deleteObject:city];
+    }
+}
+
+- (City *)getCityWithName:(NSString *)name
+{
+    // Request creation
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"City" inManagedObjectContext:self.dbManager.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    
+    // Predicate
+    NSPredicate *predicate =
+    [NSPredicate predicateWithFormat:@"self.name == %@", name];
+    [fetchRequest setPredicate:predicate];
+    
+    // Start request
+    NSError *error;
+    NSArray *fetchedObjects = [self.dbManager.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if ([fetchedObjects count])
+    {
+        return [fetchedObjects objectAtIndex:0];
+    }
+    else
+    {
+        return nil;
     }
 }
 

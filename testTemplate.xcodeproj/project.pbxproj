@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3F4A4318142BC600B3FD57 /* TestSemaphor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F4A4218142BC600B3FD57 /* TestSemaphor.m */; };
+		8E3F4A4418142BC600B3FD57 /* TestSemaphor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F4A4218142BC600B3FD57 /* TestSemaphor.m */; };
+		8E3F4A4518142BC600B3FD57 /* TestSemaphor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F4A4218142BC600B3FD57 /* TestSemaphor.m */; };
+		8E3F4A4818142BF100B3FD57 /* SQLIForecastServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F4A4618142BF100B3FD57 /* SQLIForecastServiceTest.m */; };
+		8E3F4A4B18142DF600B3FD57 /* londonForecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E3F4A4A18142DF600B3FD57 /* londonForecast.json */; };
+		8E3F4A4C18142DF600B3FD57 /* londonForecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E3F4A4A18142DF600B3FD57 /* londonForecast.json */; };
 		8E6284E31813DFA80096D433 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6284E21813DFA80096D433 /* Forecast.m */; };
 		8E6284E41813DFA80096D433 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6284E21813DFA80096D433 /* Forecast.m */; };
 		8E6284E51813DFA80096D433 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6284E21813DFA80096D433 /* Forecast.m */; };
@@ -101,6 +107,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E3F4A4118142BC600B3FD57 /* TestSemaphor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSemaphor.h; sourceTree = "<group>"; };
+		8E3F4A4218142BC600B3FD57 /* TestSemaphor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSemaphor.m; sourceTree = "<group>"; };
+		8E3F4A4618142BF100B3FD57 /* SQLIForecastServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLIForecastServiceTest.m; sourceTree = "<group>"; };
+		8E3F4A4A18142DF600B3FD57 /* londonForecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = londonForecast.json; sourceTree = "<group>"; };
 		8E6284E11813DFA80096D433 /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
 		8E6284E21813DFA80096D433 /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		8EC5B2791811B9AA00C32768 /* testTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +211,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E3F4A4918142DE000B3FD57 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8E3F4A4A18142DF600B3FD57 /* londonForecast.json */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		8EC5B2701811B9AA00C32768 = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +302,7 @@
 			children = (
 				8EC5B2BA1811B9D100C32768 /* Supporting Files */,
 				8EC5B32E1811CF0800C32768 /* SQLIDatabaseTest.m */,
+				8E3F4A4618142BF100B3FD57 /* SQLIForecastServiceTest.m */,
 			);
 			path = testTemplateLogicTests;
 			sourceTree = "<group>";
@@ -291,6 +310,7 @@
 		8EC5B2BA1811B9D100C32768 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E3F4A4918142DE000B3FD57 /* Mocks */,
 				8EC5B2BB1811B9D100C32768 /* testTemplateLogicTests-Info.plist */,
 				8EC5B2BC1811B9D100C32768 /* InfoPlist.strings */,
 				8EC5B2C11811B9D100C32768 /* testTemplateLogicTests-Prefix.pch */,
@@ -346,6 +366,8 @@
 		8EC5B2ED1811C0E800C32768 /* ExternalFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E3F4A4118142BC600B3FD57 /* TestSemaphor.h */,
+				8E3F4A4218142BC600B3FD57 /* TestSemaphor.m */,
 				8EC5B2EE1811C0F100C32768 /* AFNetworking */,
 			);
 			name = ExternalFrameworks;
@@ -506,6 +528,7 @@
 			files = (
 				8EC5B32A1811C64200C32768 /* city.json in Resources */,
 				8EC5B2A61811B9AA00C32768 /* InfoPlist.strings in Resources */,
+				8E3F4A4B18142DF600B3FD57 /* londonForecast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +538,7 @@
 			files = (
 				8EC5B32B1811C64200C32768 /* city.json in Resources */,
 				8EC5B2BE1811B9D100C32768 /* InfoPlist.strings in Resources */,
+				8E3F4A4C18142DF600B3FD57 /* londonForecast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +557,7 @@
 				8EC5B3021811C10900C32768 /* AFHTTPRequestOperation.m in Sources */,
 				8EC5B3081811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
 				8EC5B3141811C10900C32768 /* AFURLRequestSerialization.m in Sources */,
+				8E3F4A4318142BC600B3FD57 /* TestSemaphor.m in Sources */,
 				8EC5B2E11811BE3D00C32768 /* SQLIDatabaseManager.m in Sources */,
 				8EC5B3201811C18E00C32768 /* SQLIForecastService.m in Sources */,
 				8EC5B31A1811C10900C32768 /* AFURLSessionManager.m in Sources */,
@@ -565,6 +590,7 @@
 				8EC5B2D31811BE2400C32768 /* City.m in Sources */,
 				8EC5B3091811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
 				8EC5B2DD1811BE2400C32768 /* Weather.m in Sources */,
+				8E3F4A4418142BC600B3FD57 /* TestSemaphor.m in Sources */,
 				8E6284E41813DFA80096D433 /* Forecast.m in Sources */,
 				8EC5B30C1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
 				8EC5B3061811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -588,9 +614,11 @@
 				8EC5B2D41811BE2400C32768 /* City.m in Sources */,
 				8EC5B30A1811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
 				8E6284E51813DFA80096D433 /* Forecast.m in Sources */,
+				8E3F4A4518142BC600B3FD57 /* TestSemaphor.m in Sources */,
 				8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */,
 				8EC5B30D1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
 				8EC5B3071811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
+				8E3F4A4818142BF100B3FD57 /* SQLIForecastServiceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

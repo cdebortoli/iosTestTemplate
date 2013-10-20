@@ -29,10 +29,24 @@
  */
 +(SQLIDatabaseAccess *)sharedInstance;
 
+
+#pragma mark - Methods
+
 /*!
  @abstract Generate the base data of cities
  */
 - (void)generateBaseCities;
+
+/*!
+ @abstract Delete the base data of cities
+ */
+- (void)deleteBaseCities;
+
+/*!
+ @abstract Get City for a particular name
+ */
+- (City *)getCityWithName:(NSString *)name;
+
 
 #pragma mark - Save and rollback
 

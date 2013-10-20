@@ -19,8 +19,8 @@
 {
     [super setUp];
     // Put setup code here; it will be run once, before the first test case.
-    
-    // Delete database ?
+    [[SQLIDatabaseAccess sharedInstance] deleteBaseCities];
+    [[SQLIDatabaseAccess sharedInstance] generateBaseCities];
 }
 
 - (void)tearDown
@@ -34,7 +34,6 @@
 
 - (void)testCitiesGeneration
 {
-    [[SQLIDatabaseAccess sharedInstance] generateBaseCities];
     NSArray *cities = [[SQLIDatabaseAccess sharedInstance] getCities];
     XCTAssertNotNil(cities, @"Cities generation fail");
     XCTAssertTrue(3 ==  [cities count], @"Cities generation fail");

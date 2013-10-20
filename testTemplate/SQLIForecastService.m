@@ -56,8 +56,9 @@
             forecastObj.maxTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MAX_TEMP]floatValue]];
             forecastObj.city = city;
             
-            //WEATHER
-            
+            // WEATHER
+#warning TODO
+            // SAVE
             NSError *error;
             [[SQLIDatabaseAccess sharedInstance] saveContext:error];
 
