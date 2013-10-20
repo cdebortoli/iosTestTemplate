@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SQLIDatabaseManager.h"
 
 @class City, Forecast, Weather;
-@class SQLIDatabaseManager;
 
 /*!
  @header SQLIDatabaseAccess.h

@@ -7,7 +7,6 @@
 //
 
 #import "SQLIDatabaseAccess.h"
-#import "SQLIDatabaseManager.h"
 #import "City.h"
 
 

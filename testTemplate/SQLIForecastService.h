@@ -6,13 +6,21 @@
 //  Copyright (c) 2013 sqli. All rights reserved.
 //
 
+#define JSON_KEY_FORECAST @"list"
+
 #define JSON_KEY_TIMESTAMP @"dt"
-#define JSON_KEY_PRESSURE @"dt"
-#define JSON_KEY_HUMIDITY @"dt"
-#define JSON_KEY_TIMESTAMP @"dt"
-#define JSON_KEY_TIMESTAMP @"dt"
-#define JSON_KEY_TIMESTAMP @"dt"
-#define JSON_KEY_TIMESTAMP @"dt"
+#define JSON_KEY_HUMIDITY @"humidity"
+#define JSON_KEY_WIND_SPEED @"speed"
+
+#define JSON_KEY_TEMP_PARENT @"temp"
+#define JSON_KEY_MIN_TEMP @"min"
+#define JSON_KEY_MAX_TEMP @"max"
+
+#define JSON_KEY_WEATHER @"weather"
+#define JSON_KEY_WEATHER_ID @"id"
+#define JSON_KEY_WEATHER_TITLE @"main"
+#define JSON_KEY_WEATHER_DESC @"description"
+
 
 #import <Foundation/Foundation.h>
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6284E31813DFA80096D433 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6284E21813DFA80096D433 /* Forecast.m */; };
+		8E6284E41813DFA80096D433 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6284E21813DFA80096D433 /* Forecast.m */; };
+		8E6284E51813DFA80096D433 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6284E21813DFA80096D433 /* Forecast.m */; };
 		8EC5B27D1811B9AA00C32768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27C1811B9AA00C32768 /* Foundation.framework */; };
 		8EC5B27F1811B9AA00C32768 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B27E1811B9AA00C32768 /* CoreGraphics.framework */; };
 		8EC5B2811811B9AA00C32768 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC5B2801811B9AA00C32768 /* UIKit.framework */; };
@@ -31,9 +34,6 @@
 		8EC5B2D21811BE2400C32768 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D11811BE2400C32768 /* City.m */; };
 		8EC5B2D31811BE2400C32768 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D11811BE2400C32768 /* City.m */; };
 		8EC5B2D41811BE2400C32768 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D11811BE2400C32768 /* City.m */; };
-		8EC5B2D71811BE2400C32768 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D61811BE2400C32768 /* Forecast.m */; };
-		8EC5B2D81811BE2400C32768 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D61811BE2400C32768 /* Forecast.m */; };
-		8EC5B2D91811BE2400C32768 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2D61811BE2400C32768 /* Forecast.m */; };
 		8EC5B2DC1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
 		8EC5B2DD1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
 		8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5B2DB1811BE2400C32768 /* Weather.m */; };
@@ -101,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E6284E11813DFA80096D433 /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
+		8E6284E21813DFA80096D433 /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		8EC5B2791811B9AA00C32768 /* testTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC5B27C1811B9AA00C32768 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8EC5B27E1811B9AA00C32768 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,8 +129,6 @@
 		8EC5B2C81811B9EF00C32768 /* WeatherModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherModel.xcdatamodel; sourceTree = "<group>"; };
 		8EC5B2D01811BE2400C32768 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		8EC5B2D11811BE2400C32768 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
-		8EC5B2D51811BE2400C32768 /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
-		8EC5B2D61811BE2400C32768 /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		8EC5B2DA1811BE2400C32768 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		8EC5B2DB1811BE2400C32768 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		8EC5B2DF1811BE3D00C32768 /* SQLIDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLIDatabaseManager.h; sourceTree = "<group>"; };
@@ -303,10 +303,10 @@
 			children = (
 				8EC5B2DA1811BE2400C32768 /* Weather.h */,
 				8EC5B2DB1811BE2400C32768 /* Weather.m */,
-				8EC5B2D51811BE2400C32768 /* Forecast.h */,
-				8EC5B2D61811BE2400C32768 /* Forecast.m */,
 				8EC5B2D01811BE2400C32768 /* City.h */,
 				8EC5B2D11811BE2400C32768 /* City.m */,
+				8E6284E11813DFA80096D433 /* Forecast.h */,
+				8E6284E21813DFA80096D433 /* Forecast.m */,
 			);
 			name = ManagedObjects;
 			sourceTree = "<group>";
@@ -525,10 +525,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6284E31813DFA80096D433 /* Forecast.m in Sources */,
 				8EC5B30E1811C10900C32768 /* AFSecurityPolicy.m in Sources */,
 				8EC5B2E61811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
 				8EC5B30B1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
-				8EC5B2D71811BE2400C32768 /* Forecast.m in Sources */,
 				8EC5B3111811C10900C32768 /* AFURLConnectionOperation.m in Sources */,
 				8EC5B3021811C10900C32768 /* AFHTTPRequestOperation.m in Sources */,
 				8EC5B3081811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
@@ -552,7 +552,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC5B3121811C10900C32768 /* AFURLConnectionOperation.m in Sources */,
-				8EC5B2D81811BE2400C32768 /* Forecast.m in Sources */,
 				8EC5B3211811C18E00C32768 /* SQLIForecastService.m in Sources */,
 				8EC5B2CA1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */,
 				8EC5B2E71811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
@@ -566,6 +565,7 @@
 				8EC5B2D31811BE2400C32768 /* City.m in Sources */,
 				8EC5B3091811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
 				8EC5B2DD1811BE2400C32768 /* Weather.m in Sources */,
+				8E6284E41813DFA80096D433 /* Forecast.m in Sources */,
 				8EC5B30C1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
 				8EC5B3061811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
 			);
@@ -576,7 +576,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC5B3131811C10900C32768 /* AFURLConnectionOperation.m in Sources */,
-				8EC5B2D91811BE2400C32768 /* Forecast.m in Sources */,
 				8EC5B3221811C18E00C32768 /* SQLIForecastService.m in Sources */,
 				8EC5B2CB1811B9EF00C32768 /* WeatherModel.xcdatamodeld in Sources */,
 				8EC5B2E81811BE4900C32768 /* SQLIDatabaseAccess.m in Sources */,
@@ -588,6 +587,7 @@
 				8EC5B32F1811CF0800C32768 /* SQLIDatabaseTest.m in Sources */,
 				8EC5B2D41811BE2400C32768 /* City.m in Sources */,
 				8EC5B30A1811C10900C32768 /* AFHTTPSessionManager.m in Sources */,
+				8E6284E51813DFA80096D433 /* Forecast.m in Sources */,
 				8EC5B2DE1811BE2400C32768 /* Weather.m in Sources */,
 				8EC5B30D1811C10900C32768 /* AFNetworkReachabilityManager.m in Sources */,
 				8EC5B3071811C10900C32768 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -916,6 +916,7 @@
 				8EC5B2AD1811B9AA00C32768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EC5B2AE1811B9AA00C32768 /* Build configuration list for PBXNativeTarget "testTemplateTests" */ = {
 			isa = XCConfigurationList;
@@ -924,6 +925,7 @@
 				8EC5B2B01811B9AA00C32768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EC5B2C41811B9D100C32768 /* Build configuration list for PBXNativeTarget "testTemplateLogicTests" */ = {
 			isa = XCConfigurationList;
@@ -932,6 +934,7 @@
 				8EC5B2C61811B9D100C32768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

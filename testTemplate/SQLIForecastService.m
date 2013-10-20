@@ -9,6 +9,8 @@
 #import "SQLIForecastService.h"
 #import "AFNetworking.h"
 #import "City.h"
+#import "Forecast.h"
+#import "Weather.h"
 #import "SQLIDatabaseAccess.h"
 
 @implementation SQLIForecastService
@@ -41,7 +43,26 @@
     [manager GET:getUrlStr parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
-        NSLog(@"JSON: %@", responseObject);
+        
+        for (NSDictionary *forecastDict in ((NSArray *) [responseObject objectForKey:JSON_KEY_FORECAST]))
+        {
+            Forecast *forecastObj = [NSEntityDescription insertNewObjectForEntityForName:@"Forecast" inManagedObjectContext:[SQLIDatabaseAccess sharedInstance].dbManager.managedObjectContext];
+            
+           
+            forecastObj.date = [NSDate dateWithTimeIntervalSince1970:[[forecastDict objectForKey:JSON_KEY_TIMESTAMP]intValue]];
+            forecastObj.humidity = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_HUMIDITY] floatValue]];
+            forecastObj.windSpeed = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_WIND_SPEED]floatValue]];
+            forecastObj.minTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MIN_TEMP]floatValue]];
+            forecastObj.maxTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MAX_TEMP]floatValue]];
+            forecastObj.city = city;
+            
+            //WEATHER
+            
+            NSError *error;
+            [[SQLIDatabaseAccess sharedInstance] saveContext:error];
+
+        }
+        
     }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
@@ -52,7 +73,6 @@
 
 - (void)testGetForecastForCity
 {
-    
     NSArray *cities = [[SQLIDatabaseAccess sharedInstance]getCities];
     [self getForecastForCity:[cities objectAtIndex:0]];
 }

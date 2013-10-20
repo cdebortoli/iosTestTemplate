@@ -19,6 +19,8 @@
 {
     [super setUp];
     // Put setup code here; it will be run once, before the first test case.
+    
+    // Delete database ?
 }
 
 - (void)tearDown
@@ -30,7 +32,7 @@
     
 }
 
-- (void)testExample
+- (void)testCitiesGeneration
 {
     [[SQLIDatabaseAccess sharedInstance] generateBaseCities];
     NSArray *cities = [[SQLIDatabaseAccess sharedInstance] getCities];
