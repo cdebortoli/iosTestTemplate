@@ -43,27 +43,12 @@
     [manager GET:getUrlStr parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
+        // Manage json
+        [SQLIForecastService manageForecastForCityJson:responseObject AndCity:city];
         
-        for (NSDictionary *forecastDict in ((NSArray *) [responseObject objectForKey:JSON_KEY_FORECAST]))
-        {
-            Forecast *forecastObj = [NSEntityDescription insertNewObjectForEntityForName:@"Forecast" inManagedObjectContext:[SQLIDatabaseAccess sharedInstance].dbManager.managedObjectContext];
-            
-           
-            forecastObj.date = [NSDate dateWithTimeIntervalSince1970:[[forecastDict objectForKey:JSON_KEY_TIMESTAMP]intValue]];
-            forecastObj.humidity = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_HUMIDITY] floatValue]];
-            forecastObj.windSpeed = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_WIND_SPEED]floatValue]];
-            forecastObj.minTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MIN_TEMP]floatValue]];
-            forecastObj.maxTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MAX_TEMP]floatValue]];
-            forecastObj.city = city;
-            
-            // WEATHER
-#warning TODO
-            // SAVE
-            NSError *error;
-            [[SQLIDatabaseAccess sharedInstance] saveContext:error];
-
-        }
-        
+        // SAVE
+        NSError *error;
+        [[SQLIDatabaseAccess sharedInstance] saveContext:error];
     }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
@@ -72,6 +57,30 @@
 }
 
 
++ (NSArray *)manageForecastForCityJson:(NSDictionary *)json AndCity:(City *)city
+{
+    NSMutableArray *forecastArray = [[NSMutableArray alloc]init];
+    for (NSDictionary *forecastDict in ((NSArray *) [json objectForKey:JSON_KEY_FORECAST]))
+    {
+        Forecast *forecastObj = [NSEntityDescription insertNewObjectForEntityForName:@"Forecast" inManagedObjectContext:[SQLIDatabaseAccess sharedInstance].dbManager.managedObjectContext];
+        
+        
+        forecastObj.date = [NSDate dateWithTimeIntervalSince1970:[[forecastDict objectForKey:JSON_KEY_TIMESTAMP]intValue]];
+        forecastObj.humidity = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_HUMIDITY] floatValue]];
+        forecastObj.windSpeed = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_WIND_SPEED]floatValue]];
+        forecastObj.minTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MIN_TEMP]floatValue]];
+        forecastObj.maxTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MAX_TEMP]floatValue]];
+        forecastObj.city = city;
+        
+        // WEATHER
+        #warning TODO
+        
+        [forecastArray addObject:forecastObj];
+    }
+    return forecastArray;
+}
+
+// Not for TU, just for me
 - (void)testGetForecastForCity
 {
     NSArray *cities = [[SQLIDatabaseAccess sharedInstance]getCities];

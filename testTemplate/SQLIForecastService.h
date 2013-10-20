@@ -41,6 +41,13 @@
  */
 -(void)getForecastForCity:(City *)city;
 
+/*!
+ @abstract Manage the json returned by the webservice
+ */
++ (NSArray *)manageForecastForCityJson:(NSDictionary *)json AndCity:(City *)city;
+
+
+// Not for TU, just for me
 - (void)testGetForecastForCity;
 
 @end

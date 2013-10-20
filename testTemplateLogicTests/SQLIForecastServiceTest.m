@@ -91,26 +91,15 @@
     [mockClient GET:@"http://mockUrl" parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         for (NSDictionary *forecastDict in ((NSArray *) [responseObject objectForKey:JSON_KEY_FORECAST]))
-         {
-             Forecast *forecastObj = [NSEntityDescription insertNewObjectForEntityForName:@"Forecast" inManagedObjectContext:[SQLIDatabaseAccess sharedInstance].dbManager.managedObjectContext];
-             
-             
-             forecastObj.date = [NSDate dateWithTimeIntervalSince1970:[[forecastDict objectForKey:JSON_KEY_TIMESTAMP]intValue]];
-             forecastObj.humidity = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_HUMIDITY] floatValue]];
-             forecastObj.windSpeed = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_WIND_SPEED]floatValue]];
-             forecastObj.minTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MIN_TEMP]floatValue]];
-             forecastObj.maxTemp = [NSNumber numberWithFloat:[[[forecastDict objectForKey:JSON_KEY_TEMP_PARENT] objectForKey:JSON_KEY_MAX_TEMP]floatValue]];
-             forecastObj.city = currentCity;
-             [forecastResult addObject:forecastObj];
-             // WEATHER
-         }
-
+         // Get the result for the json returned by the mock ws
+         [forecastResult setArray:[SQLIForecastService manageForecastForCityJson:responseObject AndCity:currentCity]];
+         
          // Lift
          [[TestSemaphor sharedInstance] lift:semaphoreKey];
      }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
+         // No result
          forecastResult = nil;
          // Lift
          [[TestSemaphor sharedInstance] lift:semaphoreKey];
