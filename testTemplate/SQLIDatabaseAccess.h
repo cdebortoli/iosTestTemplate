@@ -47,6 +47,16 @@
  */
 - (City *)getCityWithName:(NSString *)name;
 
+/*!
+ @abstract Get forecasts data for a city
+ */
+- (NSArray *)getForecastDataForCity:(City *)city;
+
+/*!
+ @abstract Delete the forecast data
+ */
+- (void)deleteForecasts;
+
 
 #pragma mark - Save and rollback
 

@@ -8,6 +8,7 @@
 
 #import "SQLIDatabaseAccess.h"
 #import "City.h"
+#import "Forecast.h"
 
 
 @implementation SQLIDatabaseAccess
@@ -99,6 +100,50 @@ static SQLIDatabaseAccess __strong *sharedInstance = nil;
     else
     {
         return nil;
+    }
+}
+
+- (NSArray *)getForecastDataForCity:(City *)city
+{
+    // Request creation
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Forecast" inManagedObjectContext:self.dbManager.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    
+    // Predicate
+    NSPredicate *predicate =
+    [NSPredicate predicateWithFormat:@"self.city.name == %@", city.name];
+    [fetchRequest setPredicate:predicate];
+    
+    // Start request
+    NSError *error;
+    NSArray *fetchedObjects = [self.dbManager.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if ([fetchedObjects count])
+    {
+        return fetchedObjects;
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+- (void)deleteForecasts
+{
+    // Request creation
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Forecast" inManagedObjectContext:self.dbManager.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    NSArray *fetchedObjects = [self.dbManager.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    for (Forecast *forecastObj in fetchedObjects)
+    {
+        [self.dbManager.managedObjectContext deleteObject:forecastObj];
     }
 }
 

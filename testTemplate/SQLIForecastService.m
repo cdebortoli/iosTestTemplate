@@ -43,16 +43,25 @@
     [manager GET:getUrlStr parameters:nil
          success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
+        // Delete all previous forecast
+        [[SQLIDatabaseAccess sharedInstance] deleteForecasts];
+        
         // Manage json
         [SQLIForecastService manageForecastForCityJson:responseObject AndCity:city];
         
         // SAVE
         NSError *error;
         [[SQLIDatabaseAccess sharedInstance] saveContext:error];
+        
+        // Notification
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SQLIWebserviceForecastReceived" object:nil];
+
     }
          failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
-        NSLog(@"Error: %@", error);
+        // Notification
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SQLIWebserviceForecastError" object:nil];
+
     }];
 }
 

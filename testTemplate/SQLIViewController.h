@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SQLIViewController : UIViewController
+@interface SQLIViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *forecastCollectionView;
+@property (strong, nonatomic) IBOutlet UIView *loadingView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+
+- (IBAction)changeCitySegmentController:(id)sender;
 
 @end
