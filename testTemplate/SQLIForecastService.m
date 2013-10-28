@@ -62,9 +62,8 @@
     NSMutableArray *forecastArray = [[NSMutableArray alloc]init];
     for (NSDictionary *forecastDict in ((NSArray *) [json objectForKey:JSON_KEY_FORECAST]))
     {
+        // FORECAST
         Forecast *forecastObj = [NSEntityDescription insertNewObjectForEntityForName:@"Forecast" inManagedObjectContext:[SQLIDatabaseAccess sharedInstance].dbManager.managedObjectContext];
-        
-        
         forecastObj.date = [NSDate dateWithTimeIntervalSince1970:[[forecastDict objectForKey:JSON_KEY_TIMESTAMP]intValue]];
         forecastObj.humidity = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_HUMIDITY] floatValue]];
         forecastObj.windSpeed = [NSNumber numberWithFloat:[[forecastDict objectForKey:JSON_KEY_WIND_SPEED]floatValue]];
@@ -73,7 +72,18 @@
         forecastObj.city = city;
         
         // WEATHER
-        #warning TODO
+        Weather *weatherObj = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:[SQLIDatabaseAccess sharedInstance].dbManager.managedObjectContext];
+        if ((((NSArray *)[forecastDict objectForKey:JSON_KEY_WEATHER]) != nil) &&
+            (([(NSArray *)[forecastDict objectForKey:JSON_KEY_WEATHER] count]) > 0))
+        {
+            NSDictionary *weatherDict = [[forecastDict objectForKey:JSON_KEY_WEATHER] objectAtIndex:0];
+            weatherObj.main = [weatherDict objectForKey:JSON_KEY_WEATHER_TITLE];
+            weatherObj.primaryKey = [NSNumber numberWithFloat:[[weatherDict objectForKey:JSON_KEY_WEATHER_ID]floatValue]];
+            weatherObj.weatherDescription = [weatherDict objectForKey:JSON_KEY_WEATHER_DESC];
+            weatherObj.icon = [weatherDict objectForKey:JSON_KEY_WEATHER_ICON];
+        
+            [forecastObj setWeather:weatherObj];
+        }
         
         [forecastArray addObject:forecastObj];
     }

@@ -20,6 +20,7 @@
 #define JSON_KEY_WEATHER_ID @"id"
 #define JSON_KEY_WEATHER_TITLE @"main"
 #define JSON_KEY_WEATHER_DESC @"description"
+#define JSON_KEY_WEATHER_ICON @"icon"
 
 
 #import <Foundation/Foundation.h>
